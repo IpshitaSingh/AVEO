@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row" id="main">
+    <div class="container-fluid col-3" id="mycontainer1">
+        <p>lore</p>
+    </div>
+    <div class="container-fluid col-9" id="mycontainer2">
+        <h2>Get Started With Your Account</h2>
+        <form #signUp="ngForm" novalidate (ngSubmit)="onSubmit()" >
+            <!-- for name field -->
+            <div class="form-group">
+                <label>Name</label>
+                <input #name="ngModel" class="form-control" [class.is-invalid]=" name.touched && name.invalid"type="text" name="name" placeholder="Enter your name" required="required" [(ngModel)]="signUpModel1.name">
+                <small class="text-danger" [class.d-none]="name.untouched ||  name.valid">This field is required</small>
+            </div>
+
+            <!-- for birthday field -->
+            <div class="form-group">
+                <label>birthday</label>
+                <input #birthday="ngModel" type="date" class="form-control" [class.is-invalid]=" birthday.touched && birthday.invalid" name="birthday" placeholder="Enter birthday(dd/mm/yy)" required [(ngModel)]="signUpModel1.birthday">
+                <small class="text-danger" [class.d-none]="birthday.untouched || birthday.valid">This field is required</small>
+            </div>
+
+            <!-- for phoneno field -->
+            <div class="form-group">
+                <label>Phone no.(recommended)</label>
+                <input #phone="ngModel" pattern="^[0-9]{10}$"class="form-control" [class.is-invalid]=" phone.touched && phone.invalid" name="phone" type="text" placeholder="Enter your phone number" required [(ngModel)]="signUpModel1.phone">
+                <div *ngIf="phone.errors && (phone.touched && phone.invalid)">
+                    <small class="text-danger" *ngIf="phone.errors.required">It is highly recommended to use a phone number.It could be used for password varificartion.</small>
+                    <small class="text-danger" *ngIf="phone.errors.pattern">phone number should contain 10 digits.</small>
+                </div>
+            </div>
+
+            <!-- for email field -->
+            <div class="form-group">
+                <label> Email </label>
+                <input #email="ngModel" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"class="form-control" [class.is-invalid]=" email.touched && email.invalid" type="email" name="email" placeholder="Enter your email" required [(ngModel)]="signUpModel1.email">
+                <div *ngIf="email.errors && (email.touched && email.invalid)">
+                    <small class="text-danger" *ngIf="email.errors.required">This field is required</small>
+                    <small class="text-danger" *ngIf="email.errors.pattern">Not a valid email</small>
+                </div>
+            </div>
+
+            <!-- for password field -->
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" #pwd="ngModel" pattern="^(?=.*\d).{4,8}$" [class.is-invalid]="pwd.invalid && pwd.touched" [class.is-valid]="pwd.valid && pwd.touched" placeholder="enter password" name="pwdtxt" class="form-control" required [(ngModel)]="signUpModel1.password">
+                <!-- <small class="text-danger" [class.d-none]="pwd.valid || pwd.untouched">password should be 4-8 digit and contain atleast one digit</small> -->
+                <div *ngIf="pwd.errors &&(pwd.invalid && pwd.touched)">
+                    <small class="text-danger" *ngIf="pwd.errors.required">password is required</small>
+                    <small class="text-danger" *ngIf="pwd.errors.pattern">password should be 4-8 digit long and contain atleast one digit</small>
+                </div>
+                <small class="text-success" [class.d-none]="pwd.invalid">accepted</small>
+            </div>
+            <div class="conditions">
+                <ul>
+                    <li>should contain 4-8 character</li>
+                    <li>should contain atleast one digit</li>
+                </ul>
+            </div>
+
+            <!-- for button -->
+            <button class="btn btn-primary mt-4" [disabled]="(name.invalid || phone.invalid) || (pwd.invalid || email.invalid || birthday.invalid)" type="submit">Get Started</button>
+            <p class="mt-4" style="font-size: .84em;">By clicking on the "Get Started" your are creating a "AVIO" account and you agree to AVIO's <a href="#">Terms fo Use</a> and <a href="#">Privacy Policy.</a></p>
+
+
+
+            
+            
+
+            
+        </form>
+            <!-- cancel button -->
+
+        <button class="btn btn-primary" routerLink="/home" >Back</button>
+
+    </div>
+    </div>
+</body>
+</html>

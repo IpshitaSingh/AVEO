@@ -1,0 +1,115 @@
+<router-outlet></router-outlet>
+
+<input type="checkbox" id="check">
+ 
+<header>
+  <div class="int-header">
+
+          <label for="check">
+              <div id="hamburger">☰</div>
+          </label>
+
+        <div class="aveo"><h3>AV<span>EO</span></h3>
+        
+        </div>
+
+
+       <input id="searchbar" onkeyup="myFunction()" type="text"
+    name="search" placeholder="Search across your channel">
+        <i class="fa fa-search" aria-hidden="true" style="margin-top: -3.2%; margin-left: 26%; position: absolute;
+    color: rgb(121, 120, 120);"></i> 
+  
+        
+
+  </div>
+</header>
+
+
+<div class="sidebar" id="sidebar">
+
+ 
+   <h4 style="color: rgb(95, 87, 87); padding-left: 40px; font-family: sans-serif;"><i class="fa fa-cog" style="font-size:24px;color:red"></i>SETTINGS</h4>
+<a Account class="btn active" routerLink="/Account"><i class='fas fa-user' style='font-size:24px'></i>Account</a>
+<a class="btn" routerLink="/notifications"><i class='fas fa-comment-alt' style='font-size:24px'></i>Notifications</a>
+<a class="btn" routerLink="/playback" ><i class='fas fa-video' style='font-size:24px'></i>Playback and Performance</a>
+<a class="btn" routerLink="/privacy"><i class='fas fa-user-lock' style='font-size:24px'></i>Privacy</a>
+
+<a class="btn" routerLink="/watchontv"><i class="fa fa-television" style="font-size:24px"></i>Watch on TV</a>
+<a class="btn" routerLink="/billing"><i class='fab fa-cc-amazon-pay' style='font-size:24px'></i>Billing and Payments</a>
+<a class="btn" routerLink="/advanced"><i class='far fa-sun' style='font-size:24px'></i>Advanced Settings</a>
+
+
+</div>
+
+
+
+<div class="content" id="content">
+
+
+    <ol id='dummyText'> 
+        
+       
+        <div class="header">
+         
+          <div class="main" style="margin-top: 20px; font-size: large; color: #131313;">
+          Account
+          <img src="assets/account.png">
+         </div>
+        
+        
+      <div class="title">
+        Choose how you appear and what you see on AVEO
+       
+        </div>
+      
+        
+        <div class="subtitle">
+          Signed in 
+          
+        </div>
+      
+      <hr class="yt-horizontal-rule ">
+     
+      <div class="textcontainer">
+        Your AVEO channel
+      
+      </div>
+   
+      
+      <div class="channel">
+        This is your public presence on AVEO. You need a channel to upload your own videos, comment on videos, or create playlists.
+        </div>
+        
+   <h4 style="margin-left: 10px; padding-top: 10px; font-size: 14px;">Your channel <a class="ch" href="" style="margin-left: 150px;">Create your channel</a></h4> 
+   <hr>
+
+   <div class="textcontainer">
+    Your account
+  
+  </div>
+
+ 
+  <div class="channel">
+    You sign in to AVEO with your Google account
+    </div>
+    
+<h4 style="margin-left: 10px; padding-top: 10px; font-size: 14px;">Google account<a class="ch" href="https://myaccount.google.com/" style="margin-left: 140px;">View or change your Google account settings</a></h4> 
+<div class="channellist">
+  Your will be redirected to your Google account page
+  </div>
+  <h4 style="margin-left: 10px; padding-top: 10px; font-size: 14px;">Membership <a class="ch" href="https://www.youtube.com/premium" style="margin-left: 165px;">Get AVEO Premium</a></h4> 
+<div class="channellist">
+ AVEO Premium offers uninterrupted music, ad-free videos, and more
+  </div>
+</div>
+
+
+       
+       
+   </ol> 
+
+
+
+</div>
+
+
