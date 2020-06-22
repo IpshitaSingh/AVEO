@@ -1,0 +1,85 @@
+
+<router-outlet></router-outlet>
+
+<input type="checkbox" id="check">
+ 
+<header>
+  <div class="int-header">
+
+          <label for="check">
+              <div id="hamburger">☰</div>
+          </label>
+
+        <div class="aveo"><h3>AV<span>EO</span></h3>
+        
+        </div>
+
+
+       <input id="searchbar" onkeyup="myFunction()" type="text"
+    name="search" placeholder="Search across your channel">
+        <i class="fa fa-search" aria-hidden="true" style="margin-top: -3.2%; margin-left: 26%; position: absolute;
+    color: rgb(121, 120, 120);"></i> 
+  
+        
+
+  </div>
+</header>
+
+
+<div class="sidebar" id="sidebar">
+
+ 
+   <h4 style="color: rgb(95, 87, 87); padding-left: 40px; font-family: sans-serif;"><i class="fa fa-cog" style="font-size:24px;color:red"></i>SETTINGS</h4>
+<a Account class="btn active" routerLink="/"><i class='fas fa-user' style='font-size:24px'></i>Account</a>
+<a class="btn" routerLink="/notifications"><i class='fas fa-comment-alt' style='font-size:24px'></i>Notifications</a>
+<a class="btn" routerLink="/playback" ><i class='fas fa-video' style='font-size:24px'></i>Playback and Performance</a>
+<a class="btn" routerLink="/privacy"><i class='fas fa-user-lock' style='font-size:24px'></i>Privacy</a>
+
+<a class="btn" routerLink="/watchontv"><i class="fa fa-television" style="font-size:24px"></i>Watch on TV</a>
+<a class="btn" routerLink="/billing"><i class='fab fa-cc-amazon-pay' style='font-size:24px'></i>Billing and Payments</a>
+<a class="btn" routerLink="/advanced"><i class='far fa-sun' style='font-size:24px'></i>Advanced Settings</a>
+
+
+</div>
+
+
+
+
+<div class="content" id="content">
+  <div class="header">
+    <div class="main" style="margin-top: 20px; font-size: larger; color: #131313;">
+    Watch on TV
+    <img src="assets/watchtv.png">
+  </div>
+<div class="title">
+  Play videos on your TV
+  
+
+</div>
+<div class="subtitle">
+  Connect your AVEO to your TV
+</div>
+</div>
+  
+<hr class="yt-horizontal-rule ">
+  
+<div class="textcontainer">
+  
+  <span class="step">1</span>Launch YouTube on your TV device.<br><br>
+  <span class="step">2</span>Navigate to settings and select "Link TV and Phone."<br><br>
+  <span class="step">3</span>Enter the blue TV code shown on your TV into the box below.<br><br>
+  <span class="step">4</span>Click the icon to select the display on which your video will play.<br><br>
+  
+</div>
+
+<div class="pairingtv"></div>
+<h3 class="section">
+  Link with TV code
+</h3>
+<div>
+  <input type="code" id="code" name="code" placeholder="Enter your TV code" style="margin-left: 30px; color: black;">
+  <button type="submit">ADD ON TV</button>
+</div>
+
+
+</div>
