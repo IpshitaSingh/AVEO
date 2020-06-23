@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var JS4HomePage: any;
 
 @Component({
   selector: 'app-open-side-bar',

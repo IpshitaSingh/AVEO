@@ -16,23 +16,30 @@
     transition: all .4s linear;
 
   }
+
+
   
   .sideBar a{
     font-family: 'YT Sans', 'Roboto', 'Arial', sans-serif;  
-    color: black;
-    font-weight: 300;
-    font-size: 1em; 
+    color:rgb(75, 75, 75);
+    font-weight: lighter;
+    font-size: 14px; 
     display: block;
     width: 100%;
-    line-height: 58px;
+    line-height: 47px;
     text-decoration: none;
     padding-left: 1.5em;
     box-sizing: border-box;
+    
   }
   .mybtn p{
     display: inline;
   }
 
+  .sideBar a:hover {
+    color: black;
+    font-weight: bold;
+  }
 
   .active, .mybtn:hover{
     background: #f4f4f4;
@@ -50,7 +57,7 @@
   
   .sideBar i{
     font-size: 1.2rem;
-    margin-right: 1.2em;
+    margin-right: 15px;
 
   }
   .signIn {
@@ -67,25 +74,26 @@
   .signIn button{
     width: 60%;
     height: 3em;
-    background-color: none;
+    background-color: white;
     padding: 0px .3em;
     box-sizing: border-box;
-    border: 1px blue solid;
-    border-radius: 10px;
+    border: 1px rgb(37, 100, 216) solid;
+    /* border-radius: 10px; */
   }
 
   .signIn button:hover{
-    background-color: #cccccc;
+    background-color: #f4f4f4;
     transition: all .4s;
   }
   .signIn button i{
-    color: blue;
+    color: rgb(37, 100, 216);
     margin: 0px .5em 0px 0px ;
   }
   .signIn button span{
     font-size: 1.2em;
     text-align: center;
-    color: blue;
+    font-weight: bold;
+    color: rgb(37, 100, 216);
   }
   
 

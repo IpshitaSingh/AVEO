@@ -48,10 +48,10 @@
   }
   
   .aveo h3{
-    margin-left: 50px;
-    font-size: 30px;
-    font-weight: 900;
-    
+    margin-left: -28px;
+    font-size: 25px;
+    /* font-weight: bolder; */
+    padding-top: 5px;
   }
   
   
@@ -61,11 +61,10 @@
     position: fixed;
     cursor: pointer;
     left: 25px;
-    font-size: 30px;
-    margin: 3px 0;
+    font-size: 20px;
     transition: 0.5s;
     transition-property: color;
-    margin-top: 10px;
+    margin-top: 25px;
   }  
   #check{
       display: none;
