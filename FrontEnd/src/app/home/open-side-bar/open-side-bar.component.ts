@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var JS4HomePage: any;
+
 import { Router } from '@angular/router';
 
 @Component({

@@ -34,6 +34,59 @@
         content[i].classList.toggle("extend")
       }
     }
+
+
+//   // Youtube API
+//   $(document).ready(function() {
+
+//   var key = 'AIzaSyDhSd2NOnpSB0Fmf4fh-BvJKcg-Twc5Uuk';
+//   var playlistID = 'PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj';
+//   var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+
+//   var options = {
+//     part: 'snippet',
+//     key: key,
+//     maxResults: 32,
+//     playlistId: playlistId
+//   }
+
+//   loadVids();
+
+//   function loadVids() {
+//     $.getJSON(URL, options, function(data){
+//      var id = data.items[0].snippet.resourceId.videoId;
+//      resultsloop(data);
+//     })
+//   }
+
+//    function resultsloop(data) {
+
+//     $.each(data.items, function(i, item){
+
+      
+//     var thumb = item.snippet.thumbnails.medium.url;
+
+//     $('main').append(' 
+//         <article>
+//             <img src="${thumb}" alt="thumbnail" class="thumb">
+//             <div class="details">
+//                 <h4>Title</h4>
+//                 <p>Channel Name</p>
+//             </div>
+//         </article>
+//         ');
+  
+
+//     });
+
+
+
+  
+//       }
+
+// });
+
+
   </script>
   
 </body>
