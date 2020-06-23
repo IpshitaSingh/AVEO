@@ -7,11 +7,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    
 </head>
 <body>
     <div class="row" id="main">
     <div class="container-fluid col-3" id="mycontainer1">
-        <p>lore</p>
+        <div class="container-fluid col-3" id="mycontainer1">
+            <i class="fas fa-fire"></i>
+            <h2>AV<span>IO</span></h2>
+        </div>
     </div>
     <div class="container-fluid col-9" id="mycontainer2">
         <h2>Get Started With Your Account</h2>
@@ -69,7 +75,10 @@
             </div>
 
             <!-- for button -->
-            <button class="btn btn-primary mt-4" [disabled]="(name.invalid || phone.invalid) || (pwd.invalid || email.invalid || birthday.invalid)" type="submit">Get Started</button>
+            <div class="row">
+            <button class="btn btn-primary mt-4 col-3" [disabled]="(name.invalid || phone.invalid) || (pwd.invalid || email.invalid || birthday.invalid)" type="submit">Get Started</button>
+            <p class="mt-4 col">Already have an account! <a class="ml-1" routerLink='/login'>Sign In</a></p>
+            </div>
             <p class="mt-4" style="font-size: .84em;">By clicking on the "Get Started" your are creating a "AVIO" account and you agree to AVIO's <a href="#">Terms fo Use</a> and <a href="#">Privacy Policy.</a></p>
 
 

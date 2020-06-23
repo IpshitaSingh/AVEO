@@ -7,12 +7,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     
 </head>
 <body>
     <div class="row" id="main">
         <div class="container-fluid col-3" id="mycontainer1">
-            <p>lore</p>
+            <i class="fas fa-fire"></i>
+            <h2>AV<span>IO</span></h2>
         </div>
     <div class="container-fluid col-9">
         <h1>login form</h1>
@@ -33,7 +36,7 @@
             <!-- for password -->
             <div class="form-group">
                 <label>Password</label>
-                <input type="text" #pwd="ngModel" pattern="^(?=.*\d).{4,8}$" [class.is-invalid]="pwd.invalid && pwd.touched" [class.is-valid]="pwd.valid && pwd.touched" placeholder="enter password" name="pwdtxt" class="form-control" required [(ngModel)]="loginModel1.pwd">
+                <input type="password" #pwd="ngModel" pattern="^(?=.*\d).{4,8}$" [class.is-invalid]="pwd.invalid && pwd.touched" [class.is-valid]="pwd.valid && pwd.touched" placeholder="enter password" name="pwdtxt" class="form-control" required [(ngModel)]="loginModel1.pwd">
                 <!-- <small class="text-danger" [class.d-none]="pwd.valid || pwd.untouched">password should be 4-8 digit and contain atleast one digit</small> -->
                 <div *ngIf="pwd.errors &&(pwd.invalid && pwd.touched)">
                     <small class="text-danger" *ngIf="pwd.errors.required">password is required</small>

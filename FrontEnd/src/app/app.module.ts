@@ -22,6 +22,10 @@ import { WatchontvComponent } from './watchontv/watchontv.component';
 import { BillingComponent } from './billing/billing.component';
 import { AdvancedComponent } from './advanced/advanced.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { SidebarComponent } from './userhome/sidebar/sidebar.component';
+import { AuthGuard } from './guards/auth.guard';
+import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
 
 
 @NgModule({
@@ -40,7 +44,9 @@ import { PrivacyComponent } from './privacy/privacy.component';
     WatchontvComponent,
     BillingComponent,
     AdvancedComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    UserhomeComponent,
+    SidebarComponent,
    
    
   ],
@@ -51,7 +57,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [AuthGuard,UserHomeGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

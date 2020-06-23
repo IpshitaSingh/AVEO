@@ -11,14 +11,18 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { WatchontvComponent } from './watchontv/watchontv.component';
 import { BillingComponent } from './billing/billing.component';
 import { AdvancedComponent } from './advanced/advanced.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { AuthGuard } from './guards/auth.guard';
+import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
+
 
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
-  {path:'signUp',component:SignUpComponent},
-  {path:'home',component:HomeComponent},
-  {path:'login',component:LoginComponent},
+  {path:'',component:HomeComponent,canActivate: [AuthGuard], data:['true']},
+  {path:'signUp',component:SignUpComponent,canActivate: [AuthGuard], data:['true']},
+  {path:'home',component:HomeComponent ,canActivate: [AuthGuard], data:['true']},
+  {path:'login',component:LoginComponent,canActivate: [AuthGuard], data:['true']},
   {path:'dashboard',component:DashboardComponent},
   {path:'Account',component:AccountComponent},
   {path:'notifications',component:NotificationsComponent},
@@ -26,8 +30,8 @@ const routes: Routes = [
   {path:'privacy',component:PrivacyComponent},
   {path:'watchontv',component:WatchontvComponent},
   {path:'billing',component:BillingComponent},
-  {path:'advanced',component:AdvancedComponent}
-  
+  {path:'advanced',component:AdvancedComponent},
+   {path:'userhome',component:UserhomeComponent , canActivate:[UserHomeGuardGuard],data:['true'] }
     
 ];
 
