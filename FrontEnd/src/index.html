@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets//JS4homePage.js"></script>
-    <!-- <link rel="stylesheet" href="assets/dashboard.css"> -->
+    
+  
 
 </head>
 <body>
@@ -37,55 +37,70 @@
 
 
 //   // Youtube API
-//   $(document).ready(function() {
+$(document).ready(function () {
 
-//   var key = 'AIzaSyDhSd2NOnpSB0Fmf4fh-BvJKcg-Twc5Uuk';
-//   var playlistID = 'PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj';
-//   var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
-
-//   var options = {
-//     part: 'snippet',
-//     key: key,
-//     maxResults: 32,
-//     playlistId: playlistId
-//   }
-
-//   loadVids();
-
-//   function loadVids() {
-//     $.getJSON(URL, options, function(data){
-//      var id = data.items[0].snippet.resourceId.videoId;
-//      resultsloop(data);
-//     })
-//   }
-
-//    function resultsloop(data) {
-
-//     $.each(data.items, function(i, item){
-
-      
-//     var thumb = item.snippet.thumbnails.medium.url;
-
-//     $('main').append(' 
-//         <article>
-//             <img src="${thumb}" alt="thumbnail" class="thumb">
-//             <div class="details">
-//                 <h4>Title</h4>
-//                 <p>Channel Name</p>
-//             </div>
-//         </article>
-//         ');
-  
-
-//     });
+var key = 'AIzaSyDhSd2NOnpSB0Fmf4fh-BvJKcg-Twc5Uuk';
+var playlistId = 'PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj';
+var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 
+var options = {
+    part: 'snippet',
+    key: key,
+    maxResults: 42,
+    playlistId: playlistId
+}
 
-  
-//       }
+loadVids();
 
-// });
+function loadVids() {
+    $.getJSON(URL, options, function (data) {
+        var id = data.items[0].snippet.resourceId.videoId;
+        mainVid(id);
+        resultsLoop(data);
+    });
+}
 
+function mainVid(id) {
+    $('#video').html(`
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <h1 style="color: white; margin-top: 8px;">Selected video</h1>
+            `);
+}
+
+    
+function resultsLoop(data) {
+
+    $.each(data.items, function (i, item) {
+
+        var thumb = item.snippet.thumbnails.medium.url;
+        var title = item.snippet.title;
+        var desc = item.snippet.description.substring(0, 100);
+        var vid = item.snippet.resourceId.videoId;
+
+
+        $('main').append(`
+                        <article class="item" data-key="${vid}">
+
+                            <img src="${thumb}" alt="" class="thumb">
+                            <div class="details">
+                                <h4>${title}</h4>
+                                <p>${desc}</p>
+                            </div>
+
+                        </article>
+                    `);
+    });
+}
+
+    // CLICK EVENT
+$('main').on('click', 'article', function () {
+    var id = $(this).attr('data-key');
+    mainVid(id);
+});
+
+
+});
 
   </script>
   
