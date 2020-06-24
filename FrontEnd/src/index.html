@@ -36,12 +36,13 @@
     }
 
 
-//   // Youtube API
+ // Youtube API
 $(document).ready(function () {
 
-var key = 'AIzaSyDhSd2NOnpSB0Fmf4fh-BvJKcg-Twc5Uuk';
+var key = 'AIzaSyB0DndFbqSujIZLqpd7SsbDpYnAMUtb41A'; 
 var playlistId = 'PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj';
 var URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
+
 
 
 var options = {
@@ -64,7 +65,7 @@ function loadVids() {
 function mainVid(id) {
     $('#video').html(`
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <h1 style="color: white; margin-top: 8px;">Selected video</h1>
+                <h1 style="color: white; margin-top: 8px;">Selected video</h1>
             `);
 }
 

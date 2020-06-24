@@ -43,11 +43,7 @@ main {
 }
 
 article {
-	
-	
 	padding: 8px 12px;
-
-
 }
 
 article:hover {
@@ -66,37 +62,3 @@ article:hover {
     padding-bottom: 12px;
 }
 
-
-
-
-/* main {
- padding-left: 290px;
- padding-top: 50px;
-}
-
-.container {
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: auto auto auto auto;
-    
-}
-
-.thumb {
-    height: 180px;
-    width: 280px;
-}
-
-article h4 {
-    margin-top: 10px;
-    margin-bottom: -10px;
-}
-
-article p {
-    color: grey;
-}
-
-body {
-    overflow-y: auto;
-    padding-top: 30px;
-    background-color: rgb(246, 244, 248);
-} */
