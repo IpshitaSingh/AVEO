@@ -1,6 +1,7 @@
 ## :diamond_shape_with_a_dot_inside: Introduction
 AVEO is an Angular web application which consumes the YouTube v3 Data API to create a minimal user-interface where YouTube videos can be viewed. 
 
+
 ## :diamond_shape_with_a_dot_inside: Technology Stack
 
 * [Angular](https://angular.io/)
@@ -9,10 +10,11 @@ AVEO is an Angular web application which consumes the YouTube v3 Data API to cre
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [YouTube v3 Data API](https://developers.google.com/youtube/v3)
 
+
 ## :diamond_shape_with_a_dot_inside: Accessing YouTube API
 ### Why?
 The YouTube Data API uses a quota to ensure that developers use the service as intended and do not create applications that unfairly reduce service quality or limit access for others. After the quota has been exceeded, the API stops working. Therefore, it is required for anyone who wants to use this project to get their own API key.
-## How?
+### How?
 - Log in or create an account on https://developers.google.com/.
 - Go to this link https://console.developers.google.com/project and click on the blue CREATE PROJECT.
 - Fill in the name you want to assign to your project.
@@ -25,6 +27,7 @@ The YouTube Data API uses a quota to ensure that developers use the service as i
   Lastly, click the button with “What credentials do I need”.
 - Copy the API Key and paste it in the index.html file under the script tag.
 ![Code](https://github.com/IpshitaSingh/AVEO/blob/master/FrontEnd/src/assets/4readme.png)
+
 
 ## :diamond_shape_with_a_dot_inside: Installation
 1. Clone the repository by going by pushing the following command on Git Bash:
