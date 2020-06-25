@@ -18,7 +18,12 @@ git clone https://github.com/IpshitaSingh/AVEO.git
 ```
 npm install
 ```
-3. Run the project using the following command:
+3. Navigate into frontend and Run the project using the following command:
 ```
 ng serve -o
+```
+4. Open a new command prompt, navigate into backend and run backend using the following command;
+   (Note: you must have a internet connectivity)
+```
+node index.js
 ```
