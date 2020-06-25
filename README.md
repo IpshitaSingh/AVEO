@@ -10,7 +10,9 @@ AVEO is an Angular web application which consumes the YouTube v3 Data API to cre
 * [YouTube v3 Data API](https://developers.google.com/youtube/v3)
 
 ## :diamond_shape_with_a_dot_inside: Accessing YouTube API
-
+### Why?
+The YouTube Data API uses a quota to ensure that developers use the service as intended and do not create applications that unfairly reduce service quality or limit access for others. After the quota has been exceeded, the API stops working. Therefore, it is required for anyone who wants to use this project to get their own API key.
+## How?
 - Log in or create an account on https://developers.google.com/.
 - Go to this link https://console.developers.google.com/project and click on the blue CREATE PROJECT.
 - Fill in the name you want to assign to your project.
