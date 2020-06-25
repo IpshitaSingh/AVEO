@@ -13,7 +13,6 @@ AVEO is an Angular web application which consumes the YouTube v3 Data API to cre
 
 - Log in or create an account on https://developers.google.com/.
 - Go to this link https://console.developers.google.com/project and click on the blue CREATE PROJECT.
-!(img)(https://rapidapi.com/blog/wp-content/uploads/2019/03/google-apis-create-project.png)
 - Fill in the name you want to assign to your project.
 - Head over to [Google API Console](https://console.developers.google.com/) and search for YouTube Data API v3 in search bar.
 - Select YouTube Data API v3 and click on the ENABLE button.
