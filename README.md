@@ -38,7 +38,8 @@ git clone https://github.com/IpshitaSingh/AVEO.git
 ```
 npm install
 ```
-3. Run the project using the following command:
+3. Update the API key in index.html
+4. Run the project using the following command:
 ```
 ng serve -o
 ```
