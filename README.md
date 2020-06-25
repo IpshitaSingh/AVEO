@@ -8,6 +8,7 @@ AVEO is an Angular web application which consumes the YouTube v3 Data API to cre
 * [Javascript](https://www.javascript.com)
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [YouTube v3 Data API](https://developers.google.com/youtube/v3)
+* [MongoDB](https://www.mongodb.com/)
 
 ## :diamond_shape_with_a_dot_inside: Installation
 1. Clone the repository by going by pushing the following command on Git Bash:
