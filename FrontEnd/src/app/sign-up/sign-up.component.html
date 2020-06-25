@@ -14,10 +14,8 @@
 <body>
     <div class="row" id="main">
     <div class="container-fluid col-3" id="mycontainer1">
-        <div class="container-fluid col-3" id="mycontainer1">
             <i class="fas fa-fire"></i>
-            <h2>AV<span>IO</span></h2>
-        </div>
+            <h2>AV<span>EO</span></h2>
     </div>
     <div class="container-fluid col-9" id="mycontainer2">
         <h2>Get Started With Your Account</h2>
@@ -31,7 +29,7 @@
 
             <!-- for birthday field -->
             <div class="form-group">
-                <label>birthday</label>
+                <label>Birth date</label>
                 <input #birthday="ngModel" type="date" class="form-control" [class.is-invalid]=" birthday.touched && birthday.invalid" name="birthday" placeholder="Enter birthday(dd/mm/yy)" required [(ngModel)]="signUpModel1.birthday">
                 <small class="text-danger" [class.d-none]="birthday.untouched || birthday.valid">This field is required</small>
             </div>
@@ -69,7 +67,7 @@
             </div>
             <div class="conditions">
                 <ul>
-                    <li>should contain 4-8 character</li>
+                    <li>should contain 4-8 characters</li>
                     <li>should contain atleast one digit</li>
                 </ul>
             </div>
@@ -77,9 +75,9 @@
             <!-- for button -->
             <div class="row">
             <button class="btn btn-primary mt-4 col-3" [disabled]="(name.invalid || phone.invalid) || (pwd.invalid || email.invalid || birthday.invalid)" type="submit">Get Started</button>
-            <p class="mt-4 col">Already have an account! <a class="ml-1" routerLink='/login'>Sign In</a></p>
+            <p class="mt-4 col">Already have an account? <a class="ml-1" routerLink='/login'>Sign In</a></p>
             </div>
-            <p class="mt-4" style="font-size: .84em;">By clicking on the "Get Started" your are creating a "AVIO" account and you agree to AVIO's <a href="#">Terms fo Use</a> and <a href="#">Privacy Policy.</a></p>
+            <p class="mt-4" style="font-size: .84em;">By clicking on the "Get Started" your are creating an "AVEO" account and you agree to AVEO's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></p>
 
 
 
@@ -90,7 +88,7 @@
         </form>
             <!-- cancel button -->
 
-        <button class="btn btn-primary" routerLink="/home" >Back</button>
+        <button class="btn btn-primary" routerLink="/home">Back</button>
 
     </div>
     </div>
