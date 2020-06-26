@@ -105,8 +105,8 @@ label #hamburger{
   padding-left: 10px;
 }
 
-.btn:hover  > i{
-  color: blue;
+.icon:hover  > i{
+  color: rgb(194, 126, 194);
 }
 h3
 {
