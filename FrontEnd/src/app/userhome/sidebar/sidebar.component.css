@@ -3,7 +3,7 @@
   border-right: 1.5px solid rgb(204, 203, 203);
   z-index: 0;
   position: fixed;
-  margin-top: 0%;
+  margin-top: 4.2%;
   left: 0;
   width: 250px;
   height: 100vh;
@@ -130,4 +130,177 @@
 }
 .hide{
 display:none;
+}
+
+/* for feedback modal */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  box-sizing: border-box;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* modal header and it's content */
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(84, 110, 122);
+  color: white;
+  height: 50px;
+}
+.modal-header p{
+  font-size: 1.2em;
+  line-height: 50%;
+}
+
+/* modal body and it's content */
+.modal-body {padding: 2px 16px;}
+
+.modal-body textarea{
+border: none;
+box-shadow: none;
+box-sizing: border-box;
+color: rgb(33, 33, 33);
+flex-grow: 1;
+font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+height: auto;
+min-height: 350px;
+max-width: 100%;
+outline: none;
+padding: 18px 16px 0px;
+resize: none;
+width: 100%;
+}
+.modal-body p{
+  font-size: small;
+  color: rgb(75, 75, 75);
+}
+.modal-body a{
+  display: inline;
+  font-size: small;
+  margin: 0px;
+  padding: 0px;
+  color: blue;
+  word-spacing: 2px;
+  line-height: 2px;
+}
+.modal-body a:hover{
+  color:blue;
+}
+
+/* modal footer and it's content */
+.modal-footer {
+  width: 100%;
+  height: 50px;
+  padding: 2px 16px;
+  color: white;
+  border-top: 1px solid rgb(190,190,190);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-footer button{
+  background-color: white;
+  border:none;
+  font-size: 1.1em;
+  color: rgb(90,90,90);
+  outline: none;
+}
+.modal-footer button:active{
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(130,130,130);
+  font-weight: 600;
+}
+
+
+/* for feedback send indication */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+  display:none;
+  height: 3em;
+  overflow: hidden;
+}
+.visibility{
+  display: block;
+}
+.alert.warning {background-color: #ff9800;}
+.alert.success {background-color: #4CAF50;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.height{
+  overflow: hidden;
+  height: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.closebtn:hover {
+  color: black;
 }
