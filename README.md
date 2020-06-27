@@ -18,13 +18,13 @@ The YouTube Data API uses a quota to ensure that developers use the service as i
 - Log in or create an account on https://developers.google.com/.
 - Go to this link https://console.developers.google.com/project and click on the blue CREATE PROJECT button.
 - Fill in the name you want to assign to the project.
-- Head over to [Google API Console](https://console.developers.google.com/) and search for YouTube Data API v3 in search bar.
+- Search for YouTube Data API v3 through the search bar.
 - Select YouTube Data API v3 and click on the ENABLE button.
 - Click on <b>"Create Credential"</b> and configure the settings. Select the following options displayed on this page, 
     * YouTube Data API v3
     * Web browser
     * Public data
-  Lastly, click the button with “What credentials do I need”.
+  Lastly, click the button with “What credentials do I need?”.
 - Copy the API Key and paste it in the index.html file under the script tag.
 ![Code](https://github.com/IpshitaSingh/AVEO/blob/master/FrontEnd/src/assets/4readme.png)
 
