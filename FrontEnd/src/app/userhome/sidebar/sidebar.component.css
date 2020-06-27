@@ -14,7 +14,7 @@
   overflow-y: auto;
   scrollbar-width: .6em;
   transition: all .4s linear;
-
+  background-color: white;
 }
 
 
