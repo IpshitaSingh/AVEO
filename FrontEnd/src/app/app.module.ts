@@ -26,6 +26,7 @@ import { UserhomeComponent } from './userhome/userhome.component';
 import { SidebarComponent } from './userhome/sidebar/sidebar.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
+import { UserheaderComponent } from './userhome/userheader/userheader.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
     PrivacyComponent,
     UserhomeComponent,
     SidebarComponent,
+    UserheaderComponent,
    
    
   ],
