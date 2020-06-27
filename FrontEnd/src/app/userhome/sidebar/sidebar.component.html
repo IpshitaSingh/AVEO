@@ -8,7 +8,7 @@
     <hr>
     <div class="not">
     <div class="signIn">
-        <P>Congrats <span style="font-weight: 600;">{{ username }}</span>, You are a part of AVIO</P> 
+        <P>Welcome to AVEO <span style="font-weight: 600;">{{ username }}</span></P> 
         <button (click)="LogOut();"><i class="fas fa-user-circle"></i><span>LogOut</span></button>
     </div>
     <hr>
@@ -25,7 +25,36 @@
     <a class="mybtn" routerLink = "/dashboard"><i class="fas fa-cogs"></i>Settings</a>
     <a class="mybtn"><i class="fas fa-flag"></i>Report History</a>
     <a class="mybtn"><i class="fas fa-question-circle"></i>Help</a>
-    <a class="mybtn"><i class="fas fa-comments"></i>feedback</a>
+    <a class="mybtn" id="myBtn" (click)="popup();"><i class="fas fa-comments"></i>feedback</a>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" (click)="close();">&times;</span>
+            <p>Send feedback</p>
+          </div>
+          <div class="modal-body">
+            <textarea id="feedback" aria-label="Have feedback? We’d love to hear it, but please don’t share sensitive information. Have questions? Try help or support." autofocus="" placeholder="Have feedback? We’d love to hear it, but please don’t share sensitive information. Have questions? Try help or support." required="" rows="1"></textarea>
+            <p>We will use the information you give us to help address technical issues and to improve our services, subject to our <a>Privacy Policy</a> and <a>Terms of Service</a>.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cancel" (click)="cancel();">CANCEL</button>
+            <button type="button" id="sendbtn" (click)="send();">SEND</button>
+          </div>
+          <div class="alert success ">
+            <span class="closebtn" (click)="closealert();">&times;</span>  
+            <strong>Success!</strong> Thanks for providing feedback.
+          </div>
+
+          <div class="alert warning">
+            <span class="closebtn" (click)="closealert();">&times;</span>  
+            <strong>Sorry!</strong> You can't send empty feedback
+          </div>
+          
+        </div>
+      
+      </div>
     <hr>
     <P class="mybtn">AVEO </P>
     </div>
