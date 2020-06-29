@@ -27,6 +27,7 @@ import { SidebarComponent } from './userhome/sidebar/sidebar.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
 import { UserheaderComponent } from './userhome/userheader/userheader.component';
+import { UploadVidComponent } from './upload-vid/upload-vid.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { UserheaderComponent } from './userhome/userheader/userheader.component'
     UserhomeComponent,
     SidebarComponent,
     UserheaderComponent,
+    UploadVidComponent,
    
    
   ],

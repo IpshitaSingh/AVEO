@@ -5,7 +5,9 @@ AVEO is an Angular web application which consumes the YouTube v3 Data API to cre
 ## :diamond_shape_with_a_dot_inside: Technology Stack
 
 * [Angular](https://angular.io/)
-* [Node.js](https://nodejs.org/)
+* [MongoDB](https://www.mongodb.com)
+* [Express.js](https://www.expressjs.com)
+* [Node.js](https://www.nodejs.org/)
 * [Javascript](https://www.javascript.com)
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 * [YouTube v3 Data API](https://developers.google.com/youtube/v3)
@@ -39,7 +41,11 @@ git clone https://github.com/IpshitaSingh/AVEO.git
 npm install
 ```
 3. Update the API key in index.html
-4. Run the project using the following command:
+4. Navigate to FrontEnd folder and run the project using the following command:
 ```
 ng serve -o
+```
+5. Navigate to BackEnd folder and run the Express server using the following command:
+```
+node index.js
 ```

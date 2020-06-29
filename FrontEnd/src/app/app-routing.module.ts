@@ -14,6 +14,7 @@ import { AdvancedComponent } from './advanced/advanced.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
+import { UploadVidComponent } from './upload-vid/upload-vid.component';
 
 
 
@@ -31,12 +32,14 @@ const routes: Routes = [
   {path:'watchontv',component:WatchontvComponent},
   {path:'billing',component:BillingComponent},
   {path:'advanced',component:AdvancedComponent},
-   {path:'userhome',component:UserhomeComponent , canActivate:[UserHomeGuardGuard],data:['true'] }
+  {path:'userhome',component:UserhomeComponent , canActivate:[UserHomeGuardGuard],data:['true'] },
+  {path:'uploadvid',component:UploadVidComponent}
+  
     
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

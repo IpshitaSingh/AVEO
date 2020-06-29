@@ -1,5 +1,5 @@
 <div class="sideBar">
-    <a class="mybtn active"><i class="fas fa-home"></i><p>home</p></a>
+    <a class="mybtn active"><i class="fas fa-home"></i><p>Home</p></a>
     <a class="mybtn"><i class="fas fa-fire"></i><p>Trending</p></a>
     <a class="mybtn"><i class="fas fa-plus-circle"></i><p>Subscriptions</p></a>
     <hr>
@@ -8,11 +8,11 @@
     <hr>
     <div class="not">
     <div class="signIn">
-        <P>Welcome to AVEO <span style="font-weight: 600;">{{ username }}</span></P> 
-        <button (click)="LogOut();"><i class="fas fa-user-circle"></i><span>LogOut</span></button>
+        <P>Welcome to AVEO, <span style="font-weight: 600;">{{ username }}</span>!</P> 
+        <button (click)="LogOut();"><i class="fas fa-user-circle"></i><span>Log Out</span></button>
     </div>
     <hr>
-    <h4 style="padding:0px 0px 0px 1.5em; color: #8d8585;">BEST FROM US</h4>
+    <h4 style="padding:0px 0px 0px 1.5em; color: #8d8585; margin-bottom: 1px;">BEST FROM US</h4>
     <a class="mybtn"><i class="fas fa-music"></i>Music</a>
     <a class="mybtn"><i class="fas fa-futbol-o"></i>Sports</a>
     <a class="mybtn"><i class="fas fa-gamepad"></i>Gaming</a>
@@ -22,6 +22,7 @@
     <a class="mybtn"><i class="fas fa-cart-plus"></i>Fashion</a>
     <a class="mybtn"><i class="fas fa-institution"></i>learning</a>
     <hr>
+    <a class="mybtn" routerLink="/upload-vid"><i class="fa fa-upload"></i>Upload</a>
     <a class="mybtn" routerLink = "/dashboard"><i class="fas fa-cogs"></i>Settings</a>
     <a class="mybtn"><i class="fas fa-flag"></i>Report History</a>
     <a class="mybtn"><i class="fas fa-question-circle"></i>Help</a>
