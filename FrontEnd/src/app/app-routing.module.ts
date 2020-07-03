@@ -14,7 +14,8 @@ import { AdvancedComponent } from './advanced/advanced.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AuthGuard } from './guards/auth.guard';
 import { UserHomeGuardGuard } from './guards/user-home-guard.guard';
-import { UploadVidComponent } from './upload-vid/upload-vid.component';
+import { UploadVidComponent } from './uploadvid/uploadvid.component';
+import { TrendingComponent } from './trending/trending.component';
 
 
 
@@ -33,8 +34,8 @@ const routes: Routes = [
   {path:'billing',component:BillingComponent},
   {path:'advanced',component:AdvancedComponent},
   {path:'userhome',component:UserhomeComponent , canActivate:[UserHomeGuardGuard],data:['true'] },
-  {path:'uploadvid',component:UploadVidComponent}
-  
+  {path:'uploadvid',component:UploadVidComponent,canActivate:[AuthGuard],data:['true']},
+  {path:'trending',component:TrendingComponent,canActivate:[AuthGuard],data:['true']}
     
 ];
 

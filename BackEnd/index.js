@@ -6,7 +6,7 @@ const objectId = require("mongodb").ObjectID;
 
 var dbname = "firstdb"
 
-var client = new mongoClient( 'mongodb+srv://sachin12:sachin12@sachin12-c8ifq.mongodb.net/firstdb?retryWrites=true&w=majority' , {useNewUrlParser: true, useUnifiedTopology: true })
+var client = new mongoClient( 'mongodb+srv://pushpendra:pushpendra@uservideocollection.1clf4.mongodb.net/test' , {useNewUrlParser: true, useUnifiedTopology: true })
 var connection;
 // for connecting database
 client.connect((err,db)=>{

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { splitAtColon } from '@angular/compiler/src/util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userheader',
